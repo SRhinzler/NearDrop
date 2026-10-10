@@ -1,0 +1,39 @@
+# OmniRush private workspace/runtime files
+.opencode/
+
+# Local build outputs and distributable binaries are uploaded as release assets
+artifacts/
+neardrop_native/build/
+neardrop_native/.dart_tool/
+neardrop_native/.flutter-plugins
+neardrop_native/.flutter-plugins-dependencies
+neardrop_native/android/.gradle/
+neardrop_native/android/local.properties
+neardrop_native/ios/Flutter/ephemeral/
+neardrop_native/macos/Flutter/ephemeral/
+neardrop_native/linux/flutter/ephemeral/
+neardrop_native/windows/flutter/ephemeral/
+
+# IDE and OS files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Dependency/cache output
+server/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Signing keys, certificates, and local environment files
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example

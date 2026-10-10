@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122321">
+  <title>NearDrop — a little closer, a lot faster</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="NearDrop home"><span class="brand-mark" aria-hidden="true">↗</span>NearDrop<span class="brand-dot">.</span></a>
+      <div class="header-actions"><span id="network-status" class="pill"><span class="status-dot"></span>Offline</span><button id="settings-button" class="icon-button" aria-label="Connection settings" title="Connection settings">⚙</button></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div><p class="eyebrow">LESS DISTANCE. MORE POSSIBILITY.</p><h1>Your files.<br>A little closer.</h1><p class="hero-description">Move something great from one device to another.<br class="desktop-break"> No cables. No accounts. Just a connection.</p></div>
+        <div class="orbit" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><span class="orbit-device orbit-laptop">▱</span><span class="orbit-center">↗</span><span class="orbit-device orbit-phone">▯</span><span class="orbit-spark">✦</span></div>
+      </section>
+
+      <section class="identity-bar" aria-label="Your device">
+        <div class="device-icon small" aria-hidden="true">▣</div><div class="identity-copy"><span class="small-label">YOU ARE DISCOVERABLE AS</span><strong id="self-name">Getting ready…</strong></div><button id="rename-button" class="text-button">Edit name <span aria-hidden="true">↗</span></button>
+      </section>
+
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+
+      <section class="section devices-section" aria-labelledby="devices-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / MAKE A CONNECTION</p><h2 id="devices-title">Devices around you <span id="device-count" class="count">0</span></h2></div><button id="refresh-button" class="text-button">↻ Refresh</button></div>
+        <div id="devices" class="device-grid"></div>
+        <div id="devices-empty" class="empty-state"><div class="radar-icon" aria-hidden="true">◎</div><h3>Find your other screen</h3><p>Open NearDrop on another device using the same signaling server.<br>Available devices will appear here.</p></div>
+        <div id="connection" class="connection-banner" hidden><span class="connection-symbol" aria-hidden="true">↔</span><div><strong id="connection-title">Connected</strong><p id="connection-detail">Ready to share in both directions.</p></div><button id="disconnect-button" class="button secondary">Disconnect</button></div>
+      </section>
+
+      <section class="section" aria-labelledby="share-title">
+        <div class="section-heading"><div><p class="eyebrow">02 / SEND SOMETHING GOOD</p><h2 id="share-title">A simple handoff</h2></div><span class="subtle desktop-break">Straight from your device to theirs</span></div>
+        <div id="drop-zone" class="drop-zone" aria-disabled="true"><div class="upload-icon" aria-hidden="true">↑</div><h3>Big ideas. Small files. Everything between.</h3><p id="picker-help">Connect to a device to start sharing.</p><button id="pick-button" class="button primary" disabled>Choose files <span aria-hidden="true">↗</span></button><input id="file-input" type="file" multiple hidden><span class="drop-hint">or drop files here · 256 MiB of incoming storage</span></div>
+      </section>
+
+      <section class="section" aria-labelledby="transfers-title">
+        <div class="section-heading"><div><p class="eyebrow">03 / ON THE MOVE</p><h2 id="transfers-title">Your transfers</h2></div><button id="clear-button" class="text-button">Clear finished</button></div>
+        <div class="transfer-columns"><section class="transfer-panel"><div class="panel-heading"><h3><span aria-hidden="true">↗</span> Sending</h3><span id="outgoing-count" class="count">0</span></div><div id="outgoing-list" class="transfer-list"><p class="transfer-empty">Files you send will land here.</p></div></section><section class="transfer-panel"><div class="panel-heading"><h3><span aria-hidden="true">↙</span> Receiving</h3><span id="incoming-count" class="count">0</span></div><div id="incoming-list" class="transfer-list"><p class="transfer-empty">A little room for something new.</p></div></section></div>
+      </section>
+    </main>
+    <footer><span class="brand footer-brand">NearDrop.</span><span>Direct connection. Encrypted in transit.</span><span class="footer-note">Made for the space between devices.</span></footer>
+  </div>
+
+  <dialog id="approval-dialog" aria-labelledby="approval-title"><form method="dialog"><span class="modal-icon" aria-hidden="true">↔</span><p class="eyebrow">A FRIENDLY KNOCK</p><h2 id="approval-title">Let’s connect.</h2><p><strong id="requester-name"></strong> wants to connect and share files with you.</p><p class="modal-note">Approve only a device you recognize. Once connected, either device can send files.</p><div class="modal-actions"><button class="button secondary" value="decline">Not now</button><button class="button primary" value="accept">Accept connection</button></div></form></dialog>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title"><form id="settings-form"><p class="eyebrow">YOUR LITTLE CORNER</p><h2 id="settings-title">Connection settings</h2><label for="device-name">Device name</label><input id="device-name" maxlength="48" required autocomplete="off"><label for="signal-url">Signaling WebSocket URL</label><input id="signal-url" type="url" placeholder="wss://your-server/ws" required autocomplete="url"><p class="modal-note">Use the same endpoint on both devices. Saving reconnects discovery and ends the current connection.</p><div class="modal-actions"><button id="settings-cancel" type="button" class="button secondary">Cancel</button><button class="button primary" type="submit">Save & connect</button></div></form></dialog>
+  <noscript><p class="notice">NearDrop needs JavaScript enabled to discover devices and transfer files.</p></noscript>
+</body>
+</html>

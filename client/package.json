@@ -1,0 +1,9 @@
+{
+  "name": "neardrop-client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test transfer.test.mjs",
+    "check": "node --check app.js && node --check transfer.js && node --check config.js"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "same-network-share-signaling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal WebSocket signaling server for same-network WebRTC file sharing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
