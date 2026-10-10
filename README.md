@@ -36,11 +36,11 @@ Build output locations:
 - Windows bundle: `neardrop_native/build/windows/x64/runner/Release/`
 - Android package: `neardrop_native/build/app/outputs/flutter-apk/app-release.apk`
 
-Ready-to-share copies are placed in `artifacts/`:
+Ready-to-share copies:
 
-- `artifacts/NearDrop-Setup.exe` — Windows installer with Start Menu/uninstall support
-- `artifacts/NearDrop-Windows-x64.zip`
-- `artifacts/NearDrop-Android.apk`
+- `NearDrop-Setup.exe` — Windows installer with Start Menu/uninstall support
+- `NearDrop-Windows-x64.zip`
+- `NearDrop-Android.apk`
 
 The Windows ZIP must be extracted as a whole; do not copy only the `.exe` because its Flutter DLL and `data` folder are required.
 
