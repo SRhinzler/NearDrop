@@ -1,4 +1,4 @@
-package com.example.neardrop_native
+package com.rhinzler.neardrop
 
 import android.content.Context
 import android.content.Intent

@@ -15,6 +15,8 @@ Files stream directly between the devices to disk. Completed files are saved dir
 ## Source project
 
 The native app is in `neardrop_native/`.
+Its Flutter package name is `neardrop`, and its Android application ID is
+`com.rhinzler.neardrop`.
 
 ```powershell
 cd neardrop_native

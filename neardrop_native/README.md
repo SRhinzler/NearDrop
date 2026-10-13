@@ -1,4 +1,7 @@
-# neardrop_native
+# NearDrop native
+
+Flutter package name: `neardrop`
+Android application ID: `com.rhinzler.neardrop`
 
 A new Flutter project.
 

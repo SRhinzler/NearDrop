@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.neardrop_native"
+    namespace = "com.rhinzler.neardrop"
     // file_picker's Android lifecycle integration requires API 36 at compile time.
     compileSdk = 36
     ndkVersion = flutter.ndkVersion
@@ -17,7 +17,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.neardrop_native"
+        applicationId = "com.rhinzler.neardrop"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

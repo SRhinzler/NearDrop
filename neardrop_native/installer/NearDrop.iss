@@ -3,7 +3,7 @@
 ;   flutter build windows --release
 
 #define AppName "NearDrop"
-#define AppVersion "1.0.0"
+#define AppVersion "1.0.1"
 #define AppPublisher "NearDrop"
 #define AppExeName "NearDrop.exe"
 #define SourceDir "..\build\windows\x64\runner\Release"
